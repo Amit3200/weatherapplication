@@ -3,7 +3,7 @@ $str=$_GET['name'];
 $arr=explode(" ",$str);
 $lat=$arr[0];
 $long=$arr[1];
-$url="https://api.openweathermap.org/data/2.5/weather?lat=$lat&lon=$long&appid=85a16be3da0f4da5b5003d31df3eff98";
+$url="https://api.openweathermap.org/data/2.5/weather?lat=$lat&lon=$long&appid=provideapikeyhere";
 $obj = file_get_contents($url);
 $parts = json_decode($obj,true);
 $temp= (string)((float)($parts['main']['temp'])-273)."<br>";
